@@ -1,0 +1,15 @@
+server:
+  port: 9010
+  
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: ErickMeza-pizzeria-microservicio
+        uri: http://localhost:9300
+        predicates:
+        - Path=/api/pizzeria/**
+  application:
+    name: apigateway-server
+
+    #fwespinoza@idat.edu.pe
